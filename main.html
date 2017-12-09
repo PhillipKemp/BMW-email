@@ -1,0 +1,242 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <title>A Simple Responsive HTML Email</title>
+        <style type="text/css">
+
+        @font-face {
+            font-family: 'BMW';
+            font-style: normal;
+            font-weight: normal;
+            src: url('./BMWTypeWebBoldAll.woff'), url('https://1drv.ms/u/s!AgQ0mqJ_SaKEgaU-4gvSmg_Cqwpc-g') format('woff2');
+        }
+     
+        .page{
+            width: 600px;
+            max-width: 600px;
+            min-height: 400px;            
+            background-color: white;
+            margin: 0 auto;     
+            position: relative;   
+            -webkit-box-sizing: border-box; 
+            -moz-box-sizing: border-box; 
+            box-sizing: border-box; 
+        }
+
+        .page > .top-bar{
+            width: 100%;
+            height: 22px;
+            background-color: #B2B2B2;
+            color:#272727;
+            font-size: 10px;
+            font-family: Arial, Helvetica, sans-serif;
+            text-align: center;
+            line-height: 22px;
+        }
+
+        .page > .top-bar > a{
+            color: #003399;
+            font-weight: bold;
+            text-decoration: none;
+        }
+
+        .page > .top-bar > a:hover{
+            cursor: pointer;
+            text-decoration: underline;
+        }
+
+        .page > .teaser-img{
+            position: relative;
+            width: 100%;
+            height: 340px;
+            top: 0;
+            left: 0;
+            background-image: url('./main.jpg')
+        }
+
+        .page > .teaser-img > .logo{
+            position: absolute;
+            top: 0px;
+            right: 44px;
+
+        }
+
+        .message-body{
+            width: 100%;
+            min-height: 400px;
+            background-color: white;
+            padding: 35px 30px 35px 18px;           
+            font-family: Arial;
+            font-size: 11px;
+            line-height: 14px;
+            color: #272727;
+
+            -webkit-box-sizing: border-box; 
+            -moz-box-sizing: border-box; 
+            box-sizing: border-box; 
+        }
+
+        .message-body > .header{
+            /*
+            I know this size is wrong (should be 55px), but the styleguide and the prototype is not consistent
+            I then decided to make it look more like the prototype
+            */
+            font-size: 44px;
+            line-height: 44px;
+
+            font-kerning: -45px;
+            text-transform: uppercase;
+            font-family: 'BMW';
+            font-weight: bold;
+            margin-bottom: 25px;
+            color: #272727;
+            width: 100%;
+        }
+
+        .message-body > .content{
+            width: 100%;
+            min-height: 200px;
+            overflow: auto;
+            padding-left: 20px;
+            -webkit-box-sizing: border-box; 
+            -moz-box-sizing: border-box; 
+            box-sizing: border-box; 
+        }
+
+        .message-body > .content > .name{
+            font-weight: normal;
+            line-height: 14px;
+
+            width: 100%;
+            margin-bottom: 20px;
+        }
+
+        .message-body > .content > .sub-header{
+            font-family: 'BMW';
+            font-size: 22px;
+            line-height: 22px;
+            font-kerning: -45px;
+            color: #272727;
+            width: 100%;
+            margin-top: 18px;
+            margin-bottom: 18px;
+        }
+
+        .message-body > .content > .img-mini{
+            width: 100%;
+            min-height: 10px;
+            margin-bottom: 50px;
+
+        }
+
+        .download{
+            width: 100%;;
+            margin-top: 25px;
+            margin-bottom: 25px;
+        };
+
+        a{
+            text-decoration: none;
+        }
+
+        a:hover{
+            text-decoration: underline;
+        }
+
+        .download > a{
+            font-size: 11px;
+            line-height: 16px;
+            font-weight: bold;
+            text-decoration: none;
+            color: #003399
+        }
+
+        .download > a:hover{
+            text-decoration: underline;
+        }
+
+
+        .message{
+            width: 100%;
+            line-height: 14px;
+        }
+
+        strong > a{
+            color: #272727;
+            text-decoration: none;
+        }
+
+        .bullet{
+            float: left;
+            margin: 5px 5px 5px 0;
+            width: 0; 
+            height: 0; 
+            border-top: 3px solid transparent;
+            border-bottom: 3px solid transparent;
+            border-left: 3px solid  #003399;;
+        }
+
+        .footer{
+            width: 100%;
+            min-height: 30px;
+            margin-bottom: 35px;
+            font-size: 10px;
+            line-height: 12px;
+            color: #272727;
+        }
+
+        </style>
+    </head>
+    <body bgcolor="#E0E0E0">
+       <div class="page">
+           <div class="top-bar">This message contains graphics. If you do not see the graphics, <a href="https://www.bmw.com">click here</a> to view.</div>
+           <div class="teaser-img">
+               <img class="logo" src="./id_module.png"></img>
+           </div>
+           <div class="message-body">
+            <div class="header">Joy makes every<br> day less everyday.</div>
+             <div class="content">
+                <div class="name">Dear <strong>$$Cust$$</strong></div>
+                <div class="message">
+                    Redifining the realm of possibilities in the new BMW X#. It effortlessly trancends form and function,<br> precicely
+                    sculpted around a variable and modernly trimmed interior. With BMW EfficientDynamics as standard, its performance
+                    is as impressive as iets lover emissions. The technology includes, among other innovations, Brake Energy Regeneration 
+                    and Auto Start/Stop which works together to effortlessly offer <br> best-in-class fuel consumption of just 5.6 litres
+                    per 100 km in the xDrive20d Auto. Unrivalled urban <br> elegance and athletic agility fill every second in the new BMW X3 
+                    with endless possibilities.
+                    <br><br>
+                    As a member of BMW Owner's Circle, we invite you to be one of the first to view and comment on the<br> BMW X3 television 
+                    commercial.
+                </div>
+                <div class="download">
+                    <a href="https://www.bmw.com">
+                        <div class="bullet"></div>
+                        Click here to download and view the commercial
+                    </a> 
+                </div>
+                <div class="message">
+                    Regards<br>
+                    BMW Owner's Circle
+                </div>
+                <div class="sub-header">
+                    THE NEW BMW X3.
+                </div>
+                <div class="img-mini">
+                    <img src="./ED.gif" />
+                </div>
+                <div class="footer">
+                    If you would like the BMW Customer Service Center to contact you, 
+                    <strong><a href="https://www.bmw.com">please click here.</a></strong><br>
+                    If you no longer want to receive emails from <strong>
+                    <a href="https://www.bmw.com">BMW South Africa, click here</a></strong> to unsubscribe.<br>
+                    <strong><a href="https://www.bmw.com">Please click here</a></strong> to view the BMW Legal Notice.
+                </div>
+             </div>
+            
+           </div>
+          
+
+       </div>
+    </body>
+</html>
